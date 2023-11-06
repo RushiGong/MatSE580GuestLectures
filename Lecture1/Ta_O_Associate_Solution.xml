@@ -1,0 +1,308 @@
+<?xml version="1.0"?>
+<?xml-model href="database.rng" schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
+<Database version="0">
+  <metadata>
+    <writer>pycalphad 0.1.dev1894+gceb37ec</writer>
+  </metadata>
+  <ChemicalElement id="/-" mass="0.0" reference_phase="ELECTRON_GAS" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="O" mass="15.999" reference_phase="1/2_MOLE_O2(GAS)" H298="4341.0" S298="102.52"/>
+  <ChemicalElement id="TA" mass="180.95" reference_phase="BCC_A2" H298="5681.9" S298="41.472"/>
+  <ChemicalElement id="VA" mass="0.0" reference_phase="VACUUM" H298="0.0" S298="0.0"/>
+  <Species id="O2" charge="0">
+    <ChemicalElement refid="O" ratio="2.0"/>
+  </Species>
+  <Species id="TA2O5" charge="0">
+    <ChemicalElement refid="O" ratio="5.0"/>
+    <ChemicalElement refid="TA" ratio="2.0"/>
+  </Species>
+  <Expr id="GBCCOO">
+    <Interval in="T" lower="298.15" upper="6000.0">30000.0 + GHSEROO</Interval>
+  </Expr>
+  <Expr id="GFCCOO">
+    <Interval in="T" lower="298.15" upper="6000.0">30000.0 + GHSEROO</Interval>
+  </Expr>
+  <Expr id="GFCCTA">
+    <Interval in="T" lower="298.15" upper="6000.0">16000.0 + GHSERTA + 1.7*T</Interval>
+  </Expr>
+  <Expr id="GHCPTA">
+    <Interval in="T" lower="298.15" upper="6000.0">12000.0 + GHSERTA + 2.4*T</Interval>
+  </Expr>
+  <Expr id="GHSEROO">
+    <Interval in="T" lower="298.15" upper="1000.0">-3480.87 - 25.503038*T - 11.1355*T*ln(T) - 38365.0*T**(-1.0) - 0.005098875*T**2.0 + 6.61845833e-07*T**3.0</Interval>
+    <Interval in="T" lower="1000.0" upper="3300.0">-6568.763 + 12.659879*T - 16.8138*T*ln(T) + 262905.0*T**(-1.0) - 0.0005957975*T**2.0 + 6.781e-09*T**3.0</Interval>
+    <Interval in="T" lower="3300.0" upper="6000.0">-13986.728 + 31.259624*T - 18.9536*T*ln(T) + 4383200.0*T**(-1.0) - 0.000425243*T**2.0 + 1.0721e-08*T**3.0</Interval>
+  </Expr>
+  <Expr id="GHSERTA">
+    <Interval in="T" lower="298.15" upper="1300.0">-7285.889 + 119.139857*T - 23.7592624*T*ln(T) - 3293.0*T**(-1.0) - 0.002623033*T**2.0 + 1.70109e-07*T**3.0</Interval>
+    <Interval in="T" lower="1300.0" upper="2500.0">-22389.955 + 243.88676*T - 41.137088*T*ln(T) + 2429586.0*T**(-1.0) + 0.006167572*T**2.0 - 6.55136e-07*T**3.0</Interval>
+    <Interval in="T" lower="2500.0" upper="3290.0">229382.886 - 722.59722*T + 78.5244752*T*ln(T) - 93813648.0*T**(-1.0) - 0.017983376*T**2.0 + 1.95033e-07*T**3.0</Interval>
+    <Interval in="T" lower="3290.0" upper="6000.0">-1042384.01 + 2985.49125*T - 362.159132*T*ln(T) + 554714342.0*T**(-1.0) + 0.043117795*T**2.0 - 1.055148e-06*T**3.0</Interval>
+  </Expr>
+  <Expr id="GLIQOO">
+    <Interval in="T" lower="298.15" upper="6000.0">-2648.9 + GHSEROO + 31.44*T</Interval>
+  </Expr>
+  <Expr id="GLIQTA">
+    <Interval in="T" lower="298.15" upper="1000.0">21875.086 + 111.561128*T - 23.7592624*T*ln(T) - 3293.0*T**(-1.0) - 0.002623033*T**2.0 + 1.70109e-07*T**3.0</Interval>
+    <Interval in="T" lower="1000.0" upper="3290.0">43884.339 - 61.981795*T + 0.0279523*T*ln(T) - 3523338.0*T**(-1.0) - 0.012330066*T**2.0 + 6.14599e-07*T**3.0</Interval>
+    <Interval in="T" lower="3290.0" upper="6000.0">-6314.543 + 258.110873*T - 41.84*T*ln(T)</Interval>
+  </Expr>
+  <Expr id="UN_ASS">
+    <Interval in="T" lower="298.15" upper="300.0">0.0</Interval>
+  </Expr>
+  <Phase id="BCC_A2">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="O"/>
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="O"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">40010.419 + GHSEROO + GHSERTA + 0.500158332*T</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">GHSERTA</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="O"/>
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-450322.563 + 68.5502557*T</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>1</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="O"/>
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-2502.80691</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="FCC_A1">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">GFCCTA</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="GAS">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="O2"/>
+        </Site>
+      </ConstituentArray>
+      <Gas/>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="O2"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">2.0*GHSEROO + 8.3145*T*ln(1e-05*P)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="HCP_A3">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site id="1" ratio="0.5">
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="VA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">GHCPTA</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="LIQUID">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="O"/>
+          <Constituent refid="TA"/>
+          <Constituent refid="TA2O5"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="O"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">GLIQOO</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">GLIQTA</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA2O5"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-1679837.26 + 5.0*GLIQOO + 2.0*GLIQTA</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="O"/>
+          <Constituent refid="TA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-545000.0</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>1</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="O"/>
+          <Constituent refid="TA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-180000.0</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+          <Constituent refid="TA2O5"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-100023.541</Interval>
+    </Parameter>
+    <Parameter type="G">
+      <Order>1</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+          <Constituent refid="TA2O5"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">49986.8569</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="TA2O5A">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="2.0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site id="1" ratio="5.0">
+          <Constituent refid="O"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="O"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-2276284.42 + 1029.47632*T - 171.440067*T*ln(T) - 193158.34*T**(-1.0) - 0.0096050773*T**2.0 + 1.73677223e-08*T**3.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="TA2O5B">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="2.0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site id="1" ratio="5.0">
+          <Constituent refid="O"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="TA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="O"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="298.15" upper="6000.0">-2271352.39 + 833.585199*T - 142.289298*T*ln(T) + 987493.98*T**(-1.0) - 0.0277244717*T**2.0 + 2.48229543e-06*T**3.0</Interval>
+    </Parameter>
+  </Phase>
+</Database>
