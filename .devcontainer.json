@@ -4,8 +4,8 @@
       "codespaces": {
         "openFiles": [
           "README.md",
-          "Lecture1.ipynb",
-          "Lecture2.ipynb"
+          "Lecture1/Lecture1.ipynb",
+          "Lecture2/Lecture2.ipynb"
         ]
       },
       "vscode": {
