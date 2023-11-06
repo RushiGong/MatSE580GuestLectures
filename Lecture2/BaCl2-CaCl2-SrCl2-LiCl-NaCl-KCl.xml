@@ -1,0 +1,767 @@
+<?xml version="1.0"?>
+<?xml-model href="database.rng" schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
+<Database version="0">
+  <metadata>
+    <writer>pycalphad 0.1.dev1893+g7133e49.d20230911</writer>
+  </metadata>
+  <ChemicalElement id="BA" mass="137.327" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="CA" mass="40.078" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="K" mass="39.0983" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="CL" mass="35.453" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="LI" mass="6.941" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="NA" mass="22.98976928" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="SR" mass="87.62" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <Species id="BA2" charge="0">
+    <ChemicalElement refid="BA" ratio="2.0"/>
+  </Species>
+  <Species id="BACL" charge="0">
+    <ChemicalElement refid="BA" ratio="1.0"/>
+    <ChemicalElement refid="CL" ratio="1.0"/>
+  </Species>
+  <Species id="BACL2" charge="0">
+    <ChemicalElement refid="BA" ratio="1.0"/>
+    <ChemicalElement refid="CL" ratio="2.0"/>
+  </Species>
+  <Species id="BA[2+]+2.0" charge="2.0">
+    <ChemicalElement refid="BA" ratio="1.0"/>
+  </Species>
+  <Species id="CA2" charge="0">
+    <ChemicalElement refid="CA" ratio="2.0"/>
+  </Species>
+  <Species id="CACL" charge="0">
+    <ChemicalElement refid="CA" ratio="1.0"/>
+    <ChemicalElement refid="CL" ratio="1.0"/>
+  </Species>
+  <Species id="CACL2" charge="0">
+    <ChemicalElement refid="CA" ratio="1.0"/>
+    <ChemicalElement refid="CL" ratio="2.0"/>
+  </Species>
+  <Species id="CA[2+]+2.0" charge="2.0">
+    <ChemicalElement refid="CA" ratio="1.0"/>
+  </Species>
+  <Species id="CL-1.0" charge="-1.0">
+    <ChemicalElement refid="CL" ratio="1.0"/>
+  </Species>
+  <Species id="CL2" charge="0">
+    <ChemicalElement refid="CL" ratio="2.0"/>
+  </Species>
+  <Species id="KCACL3" charge="0">
+    <ChemicalElement refid="CA" ratio="1.0"/>
+    <ChemicalElement refid="CL" ratio="3.0"/>
+    <ChemicalElement refid="K" ratio="1.0"/>
+  </Species>
+  <Species id="KCL" charge="0">
+    <ChemicalElement refid="CL" ratio="1.0"/>
+    <ChemicalElement refid="K" ratio="1.0"/>
+  </Species>
+  <Species id="K[1+]+1.0" charge="1.0">
+    <ChemicalElement refid="K" ratio="1.0"/>
+  </Species>
+  <Species id="LI2" charge="0">
+    <ChemicalElement refid="LI" ratio="2.0"/>
+  </Species>
+  <Species id="LICL" charge="0">
+    <ChemicalElement refid="CL" ratio="1.0"/>
+    <ChemicalElement refid="LI" ratio="1.0"/>
+  </Species>
+  <Species id="LI[1+]+1.0" charge="1.0">
+    <ChemicalElement refid="LI" ratio="1.0"/>
+  </Species>
+  <Species id="NACL" charge="0">
+    <ChemicalElement refid="CL" ratio="1.0"/>
+    <ChemicalElement refid="NA" ratio="1.0"/>
+  </Species>
+  <Species id="NA[1+]+1.0" charge="1.0">
+    <ChemicalElement refid="NA" ratio="1.0"/>
+  </Species>
+  <Species id="SR2" charge="0">
+    <ChemicalElement refid="SR" ratio="2.0"/>
+  </Species>
+  <Species id="SRCL" charge="0">
+    <ChemicalElement refid="CL" ratio="1.0"/>
+    <ChemicalElement refid="SR" ratio="1.0"/>
+  </Species>
+  <Species id="SRCL2" charge="0">
+    <ChemicalElement refid="CL" ratio="2.0"/>
+    <ChemicalElement refid="SR" ratio="1.0"/>
+  </Species>
+  <Species id="SR[2+]+2.0" charge="2.0">
+    <ChemicalElement refid="SR" ratio="1.0"/>
+  </Species>
+  <Phase id="BACL2_FM3M_NO.225(S2)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="BA"/>
+        </Site>
+        <Site id="1" ratio="2.0">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="BA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="600.0">-864624.65 + 357.59723*T - 73.2572*T*ln(T) + 83871.0*T**(-1.0) - 0.006337995*T**2.0</Interval>
+      <Interval in="T" lower="600.0" upper="1198.0">277947.411 + 19631.0815*T - 2301.8714*T*ln(T) - 36193360.0*T**(-1.0) - 175949.88*T**0.5 + 0.63536744*T**2.0 - 6.2811598e-05*T**3.0</Interval>
+      <Interval in="T" lower="1198.0" upper="2000.0">-914090.357 + 749.701257*T - 123.846*T*ln(T)</Interval>
+      <Interval in="T" lower="2000.0" upper="3000.0">-883966.357 + 620.154464*T - 108.784*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="BACL2_PNMA_NO.62(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="BA"/>
+        </Site>
+        <Site id="1" ratio="2.0">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="BA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="600.0">-881524.65 + 371.70403*T - 73.2572*T*ln(T) + 83871.0*T**(-1.0) - 0.006337995*T**2.0</Interval>
+      <Interval in="T" lower="600.0" upper="1198.0">261047.411 + 19645.1883*T - 2301.8714*T*ln(T) - 36193360.0*T**(-1.0) - 175949.88*T**0.5 + 0.63536744*T**2.0 - 6.2811598e-05*T**3.0</Interval>
+      <Interval in="T" lower="1198.0" upper="1198.00001">-902403.574 + 570.801721*T - 99.9839103*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+    <Phase id="CACL2_P42/MNM_NO.136(S2)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="CA"/>
+        </Site>
+        <Site id="1" ratio="2.0">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="2000.0">-811136.513 + 275.529308*T - 56.3071*T*ln(T) - 70105.0*T**(-1.0) - 0.0146807*T**2.0</Interval>
+      <Interval in="T" lower="2000.0" upper="2000.00001">-869999.522 + 722.194588*T - 115.064952*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="CACL2_PNNM_NO.58(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="CA"/>
+        </Site>
+        <Site id="1" ratio="2.0">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1045.0">-361373.539 - 3567.26254*T + 338.8218*T*ln(T) - 3980195.5*T**(-1.0) + 61581.84*T**0.5 - 0.0546283*T**2.0 - 179502.0*ln(T)</Interval>
+      <Interval in="T" lower="1045.0" upper="1045.00001">-827436.495 + 489.913328*T - 87.1181576*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="K2BACL4_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="BA"/>
+        </Site>
+        <Site id="1" ratio="4.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="2" ratio="2.0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="BA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="600.0">-1771607.4 + 740.61587*T - 153.28875*T*ln(T) - 280973.8*T**(-1.0) - 0.031806003*T**2.0</Interval>
+      <Interval in="T" lower="600.0" upper="1198.0">-629035.369 + 20014.1005*T - 2381.903*T*ln(T) - 36558205.0*T**(-1.0) - 175949.88*T**0.5 + 0.60989943*T**2.0 - 6.2811598e-05*T**3.0</Interval>
+      <Interval in="T" lower="1198.0" upper="1198.00001">-1830256.32 + 1376.62476*T - 241.545285*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="K2SRCL4_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="4.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="1" ratio="2.0">
+          <Constituent refid="K"/>
+        </Site>
+        <Site id="2" ratio="1.0">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="K"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1000.0">-1626942.6 + 4011.9076*T - 556.36825*T*ln(T) - 2324211.8*T**(-1.0) - 24079.66*T**0.5 + 0.16524534*T**2.0 - 3.2890317e-05*T**3.0</Interval>
+      <Interval in="T" lower="1000.0" upper="1000.00001">-1792921.8 + 1343.79821*T - 237.501468*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+   <Phase id="KCACL3_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="CA"/>
+        </Site>
+        <Site id="1" ratio="3.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="2" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1100.0">-1290794.99 + 780.427866*T - 144.6037*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="KCL_FM3M_NO.225(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="2500.0">-448523.057 + 191.000349*T - 40.015776*T*ln(T) - 182422.4*T**(-1.0) - 0.012734004*T**2.0</Interval>
+      <Interval in="T" lower="2500.0" upper="2500.00001">-528402.458 + 689.701808*T - 103.744171*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="KSR2CL5_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="5.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+        <Site id="2" ratio="2.0">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="K"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1000.0">-1925315.7 + 7479.6815*T - 992.68918*T*ln(T) - 4101156.4*T**(-1.0) - 48159.32*T**0.5 + 0.3686927*T**2.0 - 6.5780633e-05*T**3.0</Interval>
+      <Interval in="T" lower="1000.0" upper="1000.00001">-2216883.01 + 1606.47969*T - 277.457036*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="LICL_FM3M_NO.225(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="2000.0">-421654.913 + 225.073028*T - 41.4174*T*ln(T) - 0.01169845*T**2.0</Interval>
+      <Interval in="T" lower="2000.0" upper="2000.00001">-468448.713 + 580.748137*T - 88.2112*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NACL_FM3M_NO.225(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="2000.0">-425542.164 + 240.422495*T - 45.9403*T*ln(T) - 0.0081588*T**2.0</Interval>
+      <Interval in="T" lower="2000.0" upper="2000.00001">-458177.364 + 488.479467*T - 78.5755*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="SRCL2_FM3M_NO.225(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="2.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1000.0">-734624.56 + 3645.7824*T - 476.3367*T*ln(T) - 1959367.0*T**(-1.0) - 24079.66*T**0.5 + 0.19071335*T**2.0 - 3.2890317e-05*T**3.0</Interval>
+      <Interval in="T" lower="1000.0" upper="3000.0">294399.274 + 19649.1648*T - 2301.8714*T*ln(T) - 36193360.0*T**(-1.0) - 175949.88*T**0.5 + 0.63536744*T**2.0 - 6.2811598e-05*T**3.0</Interval>
+      <Interval in="T" lower="3000.0" upper="3000.00001">-3228497.12 + 9216.64579*T - 1086.43837*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="SRCL2_FM3M_NO.225_(DISO(S2)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="2.0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CL"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="SR"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1000.0">-728616.76 + 3639.7746*T - 476.3367*T*ln(T) - 1959367.0*T**(-1.0) - 24079.66*T**0.5 + 0.19071335*T**2.0 - 3.2890317e-05*T**3.0</Interval>
+      <Interval in="T" lower="1000.0" upper="1400.0">-884874.364 + 749.735784*T - 123.01*T*ln(T)</Interval>
+      <Interval in="T" lower="1400.0" upper="3000.0">-859100.364 + 597.959556*T - 104.6*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="MSCL">
+    <Model type="MQMQA" version="SUBQ">
+      <ConstituentArray>
+        <Site id="0">
+          <Constituent refid="BA[2+]+2.0"/>
+          <Constituent refid="CA[2+]+2.0"/>
+          <Constituent refid="K[1+]+1.0"/>
+          <Constituent refid="LI[1+]+1.0"/>
+          <Constituent refid="NA[1+]+1.0"/>
+          <Constituent refid="SR[2+]+2.0"/>
+        </Site>
+        <Site id="1">
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <ChemicalGroups>
+        <Cations>
+          <Constituent refid="NA[1+]+1.0" groupid="1"/>
+          <Constituent refid="K[1+]+1.0" groupid="1"/>
+          <Constituent refid="LI[1+]+1.0" groupid="1"/>
+          <Constituent refid="CA[2+]+2.0" groupid="2"/>
+          <Constituent refid="SR[2+]+2.0" groupid="2"/>
+          <Constituent refid="BA[2+]+2.0" groupid="2"/>
+        </Cations>
+        <Anions>
+          <Constituent refid="CL-1.0" groupid="1"/>
+        </Anions>
+      </ChemicalGroups>
+    </Model>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 1.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="1500.0">-417806.54 + 442.50914*T - 77.7638*T*ln(T) + 0.0037656*T**2.0</Interval>
+      <Interval in="T" lower="1500.0" upper="2000.0">-410049.44 + 363.858558*T - 66.944*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 1.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="2500.1">-443767.726 + 406.397574*T - 73.59656*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="LI[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 1.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="2000.1">-417234.475 + 422.389424*T - 73.3832*T*ln(T) + 0.0047363*T**2.0</Interval>
+      <Interval in="T" lower="2000.1" upper="2000.10001">-398287.381 + 278.380659*T - 54.4370527*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 2.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="700.0">-785404.557 + 431.960187*T - 81.4793*T*ln(T) - 0.00127085*T**2.0 - 2789.1*ln(T)</Interval>
+      <Interval in="T" lower="700.0" upper="3000.0">-815001.948 + 585.174749*T - 102.533*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="SR[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 2.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="800.0">-744367.48 - 1747.731*T + 158.9102*T*ln(T) + 25985.54*T**0.5 - 0.05284*T**2.0 - 51660.5*ln(T)</Interval>
+      <Interval in="T" lower="800.0" upper="3000.0">-847536.893 + 587.486737*T - 104.6*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="BA[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 2.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="800.0">-903110.77 + 163.74505*T - 48.3973*T*ln(T) + 798633.5*T**(-1.0) - 0.01577184*T**2.0 + 10525.22*ln(T)</Interval>
+      <Interval in="T" lower="800.0" upper="3000.0">-879497.78 + 614.467109*T - 108.784*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA[1+]+1.0"/>
+          <Constituent refid="NA[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 6.0 6.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K[1+]+1.0"/>
+          <Constituent refid="K[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 6.0 6.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="LI[1+]+1.0"/>
+          <Constituent refid="LI[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 6.0 6.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA[2+]+2.0"/>
+          <Constituent refid="CA[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="SR[2+]+2.0"/>
+          <Constituent refid="SR[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="BA[2+]+2.0"/>
+          <Constituent refid="BA[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA[2+]+2.0"/>
+          <Constituent refid="LI[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 3.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA[2+]+2.0"/>
+          <Constituent refid="NA[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 4.0 3.42857143 3.42857143</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="CA[2+]+2.0"/>
+          <Constituent refid="K[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 3.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA[1+]+1.0"/>
+          <Constituent refid="SR[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>3.0 6.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K[1+]+1.0"/>
+          <Constituent refid="SR[2+]+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>3.0 6.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="BA[2+]+2.0"/>
+          <Constituent refid="K[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 3.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="BA[2+]+2.0"/>
+          <Constituent refid="NA[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 3.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K[1+]+1.0"/>
+          <Constituent refid="LI[1+]+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="CL-1.0"/>
+          <Constituent refid="CL-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 6.0 6.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMX">-682.4<ConstituentArray><Site refid="0"><Constituent refid="LI[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-24.2<ConstituentArray><Site refid="0"><Constituent refid="LI[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-299.6<ConstituentArray><Site refid="0"><Constituent refid="LI[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-4710.2 + 0.7805*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1347.8 + 0.5726*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1580.0 + 0.1473*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-12281.0 + 3.9706*T<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-852.6<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-5930.6<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="CA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1119.3 + 0.4175*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="SR[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1067.8<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="SR[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-996.4 - 1.8109*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="SR[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-5538.4 + 1.7009*T<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="SR[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1496.2<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="SR[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-2509.0<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="SR[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-2409.5 + 0.8009*T<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="BA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1.1399*T<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="BA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">0<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="BA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 1 0</Exponents><AdditionalMixingConstituent refid="NA[1+]+1.0"/><AdditionalMixingExponent>1</AdditionalMixingExponent></Parameter>
+    <Parameter type="MQMX">727.1 - 0.821*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="BA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-0.8151*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="BA[2+]+2.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-695.0<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="K[1+]+1.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-67.0<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="K[1+]+1.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1562.0 + 0.2*T<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="LI[1+]+1.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-2900.0<ConstituentArray><Site refid="0"><Constituent refid="NA[1+]+1.0"/><Constituent refid="K[1+]+1.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 1 0</Exponents><AdditionalMixingConstituent refid="LI[1+]+1.0"/><AdditionalMixingExponent>1</AdditionalMixingExponent></Parameter>
+    <Parameter type="MQMX">-4884.6 + 1.1*T<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="LI[1+]+1.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-1147.3 + 1.5416*T<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="LI[1+]+1.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1 0 0 0</Exponents></Parameter>
+    <Parameter type="MQMX">-864.7 - 0.3805*T<ConstituentArray><Site refid="0"><Constituent refid="K[1+]+1.0"/><Constituent refid="LI[1+]+1.0"/></Site><Site refid="1"><Constituent refid="CL-1.0"/><Constituent refid="CL-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0 1 0 0</Exponents></Parameter>
+  </Phase>
+</Database>
