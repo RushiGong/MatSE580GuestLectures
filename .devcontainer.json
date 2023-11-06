@@ -3,9 +3,7 @@
     "customizations": {
       "codespaces": {
         "openFiles": [
-          "README.md",
-          "Lecture1/Lecture1.ipynb",
-          "Lecture2/Lecture2.ipynb"
+          "README.md"
         ]
       },
       "vscode": {
