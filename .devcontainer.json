@@ -23,5 +23,5 @@
        "memory": "16gb",
        "storage": "16gb"
     },
-    "onCreateCommand": "conda install -y python=3.10 jupyter numpy scipy && pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu && pip install pymatgen pysipfenn pymongo scikit-learn"
+    "onCreateCommand": "conda install -y python=3.9.13 jupyter numpy && pip install pycalphad==0.10.2 espei==0.8.9 pydantic==1.10.4 pycalphad-xml"
 }
