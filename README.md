@@ -18,11 +18,6 @@ In these two lectures, I will give in **Fall 2023 MatSE 580 (Computational Therm
   <img src="assets/neuralnetcolorized.png" width="400"/>
 </p><br>
 
-
-**The [`Lecture1.ipynb`](./Lecture1.html) Jupyter notebook covers points 1 and 2.**
-
-**The [`Lecture2.ipynb`](./Lecture2.html) Jupyter notebook covers points 3 and 4.**
-
 ## How to start
 Ideally, you should follow all instructions on your personal computer so that afterward, you have a neat setup ready to tackle future problems of your choosing or use it in your MatSE 580 final project. I strongly suggest using [VS Code](https://code.visualstudio.com) IDE for consistency in the class and with alternative setups (see below), but you are welcome to use anything of your choosing.
 
