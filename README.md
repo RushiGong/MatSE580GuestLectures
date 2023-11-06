@@ -8,15 +8,8 @@ In these two lectures, I will give in **Fall 2023 MatSE 580 (Computational Therm
 
 3. Use [pycalphad](https://pycalphad.org/docs/latest/) to plot phase diagram and predict desired properties from databases
 
-<p align="center">
-  <img src="assets/MongoDBChartExample.png" width="400"/>
-</p><br>
-
 4. Use [ESPEI](https://espei.org/en/latest/) to optmize parameter in solution phase and perform uncertainty quantification (UQ) and propagation (UP)
 
-<p align="center">
-  <img src="assets/neuralnetcolorized.png" width="400"/>
-</p><br>
 
 ## How to start
 Ideally, you should follow all instructions on your personal computer so that afterward, you have a neat setup ready to tackle future problems of your choosing or use it in your MatSE 580 final project. I strongly suggest using [VS Code](https://code.visualstudio.com) IDE for consistency in the class and with alternative setups (see below), but you are welcome to use anything of your choosing.
