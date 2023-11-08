@@ -1,0 +1,97 @@
+{
+    "components": ["K", "NI", "F", "LI", "NA"],
+    "phases": {
+          "LIQUID" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "LIF_L1(LIQ)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NAF_L1(LIQ)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "KF_L1(LIQ)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NIF2_L1(LIQ)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "LIF_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NAF_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "KF_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NIF2_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NIF4LI2_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NINAF3_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NIKF3_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NIK2F4_S1(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "LI_SOLID(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "F2(G)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NA_SOLID(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "K_SOLID(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NI_SOLID_FCC(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "LI(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NI(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "NA(S)'" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "K(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          },
+          "F(S)" : {
+                  "sublattice_model": [],
+                  "sublattice_site_ratios": []
+          }
+    }
+}

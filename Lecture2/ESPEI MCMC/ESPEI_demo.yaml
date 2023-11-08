@@ -1,0 +1,14 @@
+system:  
+  phase_models: ESPEI-Phases.json
+  datasets: input_data
+mcmc:
+  iterations: 10
+  input_db: Ocadiz_combined.xml
+  scheduler: None
+  chains_per_parameter: 8
+  approximate_equilibrium: False
+output:
+  output_db: MCMC_demo.xml
+  verbosity: 1
+  probfile: lnprob_demo.npy
+  tracefile: trace_demo.npy

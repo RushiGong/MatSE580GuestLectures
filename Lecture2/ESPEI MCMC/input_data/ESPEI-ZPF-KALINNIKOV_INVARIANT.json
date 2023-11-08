@@ -1,0 +1,32 @@
+{
+  "components": ["NI", "F", "K"],
+  "phases": ["KF_S1(S)", "LIQUID", "NIF2_S1(S)","NIKF3_S1(S)","NIK2F4_S1(S)"],
+  "conditions": {
+	  "P": 101325,
+	  "T": [1345,	1360,	1348,	1193,	1196,	1196,	1193,	1202,	1067,	1087,	1064,	1064,	1065,	1066,	1061,	1060]
+  },
+  "broadcast_conditions": false,
+  "output": "ZPF",
+  "values":   [			   
+			   [["LIQUID", ["F","NI"], [0.619312444454402,0.238624888908804]], ["NIF2_S1(S)", ["F","NI"], [null,null]], ["NIKF3_S1(S)", ["F","NI"], [null,null]]],				   
+			   [["LIQUID", ["F","NI"], [0.619312444454402,0.238624888908804]], ["NIF2_S1(S)", ["F","NI"], [null,null]], ["NIKF3_S1(S)", ["F","NI"], [null,null]]],	
+			   [["LIQUID", ["F","NI"], [0.619312444454402,0.238624888908804]], ["NIF2_S1(S)", ["F","NI"], [null,null]], ["NIKF3_S1(S)", ["F","NI"], [null,null]]],	
+ 
+      
+			   [["LIQUID", ["F","NI"], [0.544850905416055,0.0897018108321103]], ["NIKF3_S1(S)", ["F","NI"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.544850905416055,0.0897018108321103]], ["NIKF3_S1(S)", ["F","NI"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.544850905416055,0.0897018108321103]], ["NIKF3_S1(S)", ["F","NI"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],    
+			   [["LIQUID", ["F","NI"], [0.544850905416055,0.0897018108321103]], ["NIKF3_S1(S)", ["F","NI"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.544850905416055,0.0897018108321103]], ["NIKF3_S1(S)", ["F","NI"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+      
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]],
+			   [["LIQUID", ["F","NI"], [0.523258177112813,0.0465163542256257]], ["KF_S1(S)", ["F","K"], [null,null]], ["NIK2F4_S1(S)", ["F","NI"], [null,null]]]      
+					   ],
+  "reference": "S.V. Petrov (1989)"
+}

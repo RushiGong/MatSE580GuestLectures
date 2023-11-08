@@ -1,0 +1,713 @@
+<?xml version="1.0"?>
+<?xml-model href="database.rng" schematypens="http://relaxng.org/ns/structure/1.0" type="application/xml"?>
+<Database version="0">
+  <metadata>
+    <writer>pycalphad 0.10.1.dev5+g304a48fb</writer>
+  </metadata>
+  <ChemicalElement id="F" mass="18.9984032" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="K" mass="39.0983" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="LI" mass="6.941" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="NA" mass="22.98976928" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <ChemicalElement id="NI" mass="58.6934" reference_phase="BLANK" H298="0.0" S298="0.0"/>
+  <Species id="F-1.0" charge="-1.0">
+    <ChemicalElement refid="F" ratio="1.0"/>
+  </Species>
+  <Species id="K+1.0" charge="1.0">
+    <ChemicalElement refid="K" ratio="1.0"/>
+  </Species>
+  <Species id="LI+1.0" charge="1.0">
+    <ChemicalElement refid="LI" ratio="1.0"/>
+  </Species>
+  <Species id="NA+1.0" charge="1.0">
+    <ChemicalElement refid="NA" ratio="1.0"/>
+  </Species>
+  <Species id="NI+2.0" charge="2.0">
+    <ChemicalElement refid="NI" ratio="1.0"/>
+  </Species>
+  <Expr id="VV0000"><Interval in="T" lower="1.0" upper="6000.0">-16899.207612510476</Interval></Expr>
+  <Expr id="VV0001"><Interval in="T" lower="1.0" upper="6000.0">-15428.374873761815</Interval></Expr>
+  <Phase id="F(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="F"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6001.0"/>
+    </Parameter>
+  </Phase>
+  <Phase id="F2(G)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="2.0">
+          <Constituent refid="F"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1600.0">-354.8234 + 222.97867*T - 56.401419*T*ln(T) - 119091.51*T**(-1.0) - 1777.8761*T**0.5 + 0.0037116482*T**2.0 - 3.1811563e-07*T**3.0</Interval>
+      <Interval in="T" lower="1600.0" upper="4000.0">2556809.6 - 2073.9671*T + 142.79475*T*ln(T) - 82061625.0*T**(-1.0) + 76067.59*T**0.5 - 0.0014325127*T**2.0 - 580689.05*ln(T)</Interval>
+      <Interval in="T" lower="4000.0" upper="6000.0">-3352436.1 + 408.41455*T - 59.821707*T*ln(T) + 249582760.0*T**(-1.0) - 35316.873*T**0.5 + 581650.71*ln(T)</Interval>
+      <Interval in="T" lower="6000.0" upper="10000.0">26821.579 - 29.34478*T - 28.913066*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="K(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6001.0"/>
+    </Parameter>
+  </Phase>
+  <Phase id="KF_L1(LIQ)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-575830.76 + 414.22355*T - 71.965*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="KF_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-589729.49 + 384.19527*T - 68.757414*T*ln(T) + 383359.17*T**(-1.0) + 0.028878441*T**2.0 - 1.2567476e-05*T**3.0 + 1.9904689e-09*T**4.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="K_SOLID(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="400.0">4578938.5 + 21051.717*T - 2842.0637*T*ln(T) - 62368327.0*T**(-1.0) + 1.2013187*T**2.0 - 1043329.6*ln(T)</Interval>
+      <Interval in="T" lower="400.0" upper="1039.5">3223.3261 + 230.66797*T - 44.375754*T*ln(T) - 199697.85*T**(-1.0) + 0.013402586*T**2.0 - 2.538994e-06*T**3.0 - 2842.2592*ln(T)</Interval>
+      <Interval in="T" lower="1039.5" upper="1500.0">1190.043 + 44.144047*T - 17.445403*T*ln(T) - 997310.3*T**(-1.0) - 0.0054434916*T**2.0</Interval>
+      <Interval in="T" lower="1500.0" upper="1501.0">5276.2559 + 66.120194*T - 22.0*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="LI(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6001.0"/>
+    </Parameter>
+  </Phase>
+  <Phase id="LIF_L1(LIQ)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-617790.16 + 386.90985*T - 64.183*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="LIF_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-632481.82 + 262.4931*T - 43.309*T*ln(T) + 284550.0*T**(-1.0) - 0.008156*T**2.0 - 8.4116667e-08*T**3.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="LIQUID">
+    <Model type="MQMQA" version="SUBG">
+      <ConstituentArray>
+        <Site id="0">
+          <Constituent refid="K+1.0"/>
+          <Constituent refid="LI+1.0"/>
+          <Constituent refid="NA+1.0"/>
+          <Constituent refid="NI+2.0"/>
+        </Site>
+        <Site id="1">
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <ChemicalGroups>
+        <Cations>
+          <Constituent refid="K+1.0" groupid="1"/>
+          <Constituent refid="NA+1.0" groupid="1"/>
+          <Constituent refid="LI+1.0" groupid="1"/>
+          <Constituent refid="NI+2.0" groupid="2"/>
+        </Cations>
+        <Anions>
+          <Constituent refid="F-1.0" groupid="1"/>
+        </Anions>
+      </ChemicalGroups>
+    </Model>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 1.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="2000.0">-575830.76 + 414.22351*T - 71.965001*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 1.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="2000.0">-579464.84 + 435.4931*T - 72.898999*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="LI+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 1.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="2000.0">-617790.2 + 386.9098*T - 64.182999*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMG">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NI+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Zeta>2.4</Zeta>
+      <StoichiometricFactors>1.0 2.0 0.0 0.0 0.0</StoichiometricFactors>
+      <Interval in="T" lower="0.01" upper="2000.0">-645940.71 + 595.19157*T - 99.999985*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K+1.0"/>
+          <Constituent refid="K+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 6.0 6.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA+1.0"/>
+          <Constituent refid="NA+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 6.0 6.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="LI+1.0"/>
+          <Constituent refid="LI+1.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 6.0 6.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NI+2.0"/>
+          <Constituent refid="NI+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>6.0 6.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="K+1.0"/>
+          <Constituent refid="NI+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>3.0 6.0 3.0 3.0</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA+1.0"/>
+          <Constituent refid="NI+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>2.0 6.0 2.4 2.4</Coordinations>
+    </Parameter>
+    <Parameter type="MQMZ">
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="LI+1.0"/>
+          <Constituent refid="NI+2.0"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="F-1.0"/>
+          <Constituent refid="F-1.0"/>
+        </Site>
+      </ConstituentArray>
+      <Coordinations>2.0 6.0 2.4 2.4</Coordinations>
+    </Parameter>
+    <Parameter type="MQMX">VV0000<ConstituentArray><Site refid="0"><Constituent refid="K+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0.0 0.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">0<ConstituentArray><Site refid="0"><Constituent refid="K+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1.0 0.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">VV0001<ConstituentArray><Site refid="0"><Constituent refid="K+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0.0 1.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">-18410.0<ConstituentArray><Site refid="0"><Constituent refid="LI+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0.0 0.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">0<ConstituentArray><Site refid="0"><Constituent refid="LI+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1.0 0.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">-18828.0<ConstituentArray><Site refid="0"><Constituent refid="LI+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0.0 1.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">-2929.0<ConstituentArray><Site refid="0"><Constituent refid="NA+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0.0 0.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">-2092.0<ConstituentArray><Site refid="0"><Constituent refid="NA+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>1.0 0.0 0.0 0.0</Exponents></Parameter>
+    <Parameter type="MQMX">-12134.0<ConstituentArray><Site refid="0"><Constituent refid="NA+1.0"/><Constituent refid="NI+2.0"/></Site><Site refid="1"><Constituent refid="F-1.0"/><Constituent refid="F-1.0"/></Site></ConstituentArray><MixingCode type="G"/><Exponents>0.0 1.0 0.0 0.0</Exponents></Parameter>
+  </Phase>
+  <Phase id="LI_SOLID(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="LI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="453.69">-3853.5254 + 46.068939*T - 9.6044006*T*ln(T) - 124058.57*T**(-1.0) - 0.02049828*T**2.0</Interval>
+      <Interval in="T" lower="453.69" upper="1000.0">-1525604.3 + 6985.0554*T - 704.44799*T*ln(T) + 19563982.0*T**(-1.0) - 129758.32*T**0.5 + 0.050410253*T**2.0 + 491701.07*ln(T)</Interval>
+      <Interval in="T" lower="1000.0" upper="1001.0">-7248.2179 + 157.16855*T - 28.0*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NA(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6001.0"/>
+    </Parameter>
+  </Phase>
+  <Phase id="NAF_L1(LIQ)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-579491.67 + 436.09589*T - 72.989*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NAF_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-593065.52 + 274.81772*T - 47.63*T*ln(T) + 232150.0*T**(-1.0) - 0.007395*T**2.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NA_SOLID(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NA"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="370.98">-59594.506 - 608.12041*T + 83.612083*T*ln(T) - 0.096523427*T**2.0 + 16166.384*ln(T)</Interval>
+      <Interval in="T" lower="370.98" upper="1000.0">-460367.57 + 2193.6121*T - 233.40572*T*ln(T) + 5806510.7*T**(-1.0) - 38503.267*T**0.5 + 0.01493666*T**2.0 + 145943.73*ln(T)</Interval>
+      <Interval in="T" lower="1000.0" upper="1001.0">2124.2258 + 75.180129*T - 21.0*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NI(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6001.0"/>
+    </Parameter>
+  </Phase>
+  <Phase id="NIF2_L1(LIQ)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="2.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-645970.0 + 595.25967*T - 100.0*T*ln(T)</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NIF2_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="2.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-679565.1 + 373.23082*T - 65.505*T*ln(T) + 305801.5*T**(-1.0) - 0.0076885*T**2.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NIF4LI2_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="4.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="2.0">
+          <Constituent refid="LI"/>
+        </Site>
+        <Site id="2" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="LI"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-1948916.7 + 899.05701*T - 152.123*T*ln(T) + 874901.5*T**(-1.0) - 0.0240005*T**2.0 - 1.6823333e-07*T**3.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NIK2F4_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="4.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="2.0">
+          <Constituent refid="K"/>
+        </Site>
+        <Site id="2" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="K"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-1891012.1 + 1129.2353*T - 203.01983*T*ln(T) + 1072519.8*T**(-1.0) + 0.050068382*T**2.0 - 2.5134952e-05*T**3.0 + 3.9809378e-09*T**4.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NIKF3_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="3.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="K"/>
+        </Site>
+        <Site id="2" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="K"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-1292388.6 + 743.49308*T - 134.26241*T*ln(T) + 689160.67*T**(-1.0) + 0.021189941*T**2.0 - 1.2567476e-05*T**3.0 + 1.9904689e-09*T**4.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NINAF3_S1(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="3.0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site id="1" ratio="1.0">
+          <Constituent refid="NA"/>
+        </Site>
+        <Site id="2" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="F"/>
+        </Site>
+        <Site refid="1">
+          <Constituent refid="NA"/>
+        </Site>
+        <Site refid="2">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="6000.0">-1290180.6 + 638.77854*T - 113.135*T*ln(T) + 537951.5*T**(-1.0) - 0.0150835*T**2.0</Interval>
+    </Parameter>
+  </Phase>
+  <Phase id="NI_SOLID_FCC(S)">
+    <Model type="CEF">
+      <ConstituentArray>
+        <Site id="0" ratio="1.0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <MagneticOrdering type="IHJ" structure_factor="0.28" afm_factor="-3.0000030000030002"/>
+    </Model>
+    <Parameter type="G">
+      <Order>0</Order>
+      <ConstituentArray>
+        <Site refid="0">
+          <Constituent refid="NI"/>
+        </Site>
+      </ConstituentArray>
+      <Interval in="T" lower="0.01" upper="1729.0">-5179.159 + 117.854*T - 22.096*T*ln(T) - 0.0048407*T**2.0</Interval>
+      <Interval in="T" lower="1729.0" upper="1730.0">-27024.088 + 278.70995*T - 43.1*T*ln(T)</Interval>
+    </Parameter>
+    <Parameter type="BMAGN">0.52<Order>0</Order><ConstituentArray><Site refid="0"><Constituent refid="NI_SOLID_FCC(S)"/></Site></ConstituentArray></Parameter>
+    <Parameter type="TC">633.0<Order>0</Order><ConstituentArray><Site refid="0"><Constituent refid="NI_SOLID_FCC(S)"/></Site></ConstituentArray></Parameter>
+  </Phase>
+</Database>

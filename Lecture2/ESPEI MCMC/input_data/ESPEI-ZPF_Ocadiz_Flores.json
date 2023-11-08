@@ -1,0 +1,15 @@
+{
+  "components": ["NI", "F", "K"],
+  "phases": ["LIQUID","NIKF3_S1(S)"],
+  "conditions": {
+	  "P": 101325,
+	  "T": [1398,1320]
+  },
+  "broadcast_conditions": false,
+  "output": "ZPF",
+  "values":   [	       
+			   [["LIQUID", ["F","NI"], [0.6,0.2]], ["NIKF3_S1(S)", ["F","NI"], [null,null]]], 
+  			   [["LIQUID", ["F","NI"], [0.571039164029524,0.142078328059048]], ["NIKF3_S1(S)", ["F","NI"], [null,null]]]	   
+					   ],
+  "reference": "S.V. Petrov (1989)"
+}
