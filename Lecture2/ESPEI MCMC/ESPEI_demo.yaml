@@ -1,5 +1,5 @@
 system:  
-  phase_models: ESPEI-Phases.json
+  phase_models: Phases.json
   datasets: input_data
 mcmc:
   iterations: 10
